@@ -31,7 +31,7 @@ jobs:
 
       - name: Make tarball
         run: |
-          tar -czvf bootstrap.tar.gz bootstrap.img
+          tar -czvf btcpi2.tar.gz btcpi2.img
   
       - name: Upload artifacts  
         uses: actions/upload-artifact@v2
