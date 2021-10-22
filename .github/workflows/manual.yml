@@ -5,7 +5,7 @@ on:
     inputs:
       pifile:
         description: "path/to/pifile (without extension)"
-        default: bootstrap
+        default: btcpi2
         required: true
 
 jobs:
