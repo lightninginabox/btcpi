@@ -9,20 +9,23 @@ export BTCPAYGEN_REVERSEPROXY="nginx"
 export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-more-memory;opt-save-storage-s"
 export BTCPAY_ENABLE_SSH=true
 
-#mkdir -p /mnt/usb
-#sfdisk --delete /dev/sda
-#sleep 5
-#parted -s /dev/sda mklabel gpt
-#sleep 5
-#parted /dev/sda mkpart primary ext4 0% 100%
-#sleep 5
-#yes | mkfs.ext4 /dev/sda1
-#UUID="$(sudo blkid -s UUID -o value /dev/sda1)"
-#echo "UUID=$UUID /mnt/usb ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
-#mount /dev/sda1 /mnt/usb
-#sleep 5
-#mkdir -p /mnt/usb/docker
-#ln -s /mnt/usb/docker /var/lib/docker
+isMounted=$(sudo df | grep -c /dev/sda1)
+if [ ${isMounted} -eq 0 ]; then
+  mkdir -p /mnt/usb
+  sfdisk --delete /dev/sda
+  sleep 5
+  parted -s /dev/sda mklabel gpt
+  sleep 5
+  parted /dev/sda mkpart primary ext4 0% 100%
+  sleep 5
+  yes | mkfs.ext4 /dev/sda1
+  UUID="$(sudo blkid -s UUID -o value /dev/sda1)"
+  echo "UUID=$UUID /mnt/usb ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
+  mount /dev/sda1 /mnt/usb
+  sleep 5
+  mkdir -p /mnt/usb/docker
+  ln -s /mnt/usb/docker /var/lib/docker
+fi
 
 dphys-swapfile swapoff
 dphys-swapfile uninstall
