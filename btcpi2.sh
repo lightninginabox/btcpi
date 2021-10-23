@@ -9,8 +9,8 @@ export BTCPAYGEN_REVERSEPROXY="nginx"
 export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-more-memory;opt-save-storage-s"
 export BTCPAY_ENABLE_SSH=true
 
-isMounted=$(sudo df | grep -c /dev/mmcblk0p1)
-if [ ${isMounted} -eq 1 ]; then
+isSDMounted=$(sudo df | grep -c /dev/mmcblk0p1)
+if [ ${isSDMounted} -eq 1 ]; then
   mkdir -p /mnt/usb
   sfdisk --delete /dev/sda
   sleep 5
