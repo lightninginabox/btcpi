@@ -17,6 +17,9 @@ source modules/password.Pifile
 # Set using BOOTSTRAP_TIMEZONE (default: America/Los_Angeles)
 source modules/timezone.Pifile
 
+# Install Docker
+source modules/docker.Pifile
+
 # Set Add Firstboot service
 source modules/firstboot.Pifile
 
