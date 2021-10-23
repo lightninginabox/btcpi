@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export BTCPAY_HOST="btcpi2.local"
+export BTCPAY_HOST="btcpay.local"
 export REVERSEPROXY_DEFAULT_HOST="$BTCPAY_HOST"
 export NBITCOIN_NETWORK="mainnet"
 export BTCPAYGEN_CRYPTO1="btc"
