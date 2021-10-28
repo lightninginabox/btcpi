@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Update RaspiOS & Enable Unattended Upgrades
-apt update && apt upgrade -y && apt autoremove
+apt update && apt upgrade -y 
+apt autoremove -y
 apt-get install -y unattended-upgrades apt-listchanges
 echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
 dpkg-reconfigure -f noninteractive unattended-upgrades
