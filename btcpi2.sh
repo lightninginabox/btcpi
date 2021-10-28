@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Update RaspiOS & Enable Unattended Upgrades
-apt update && apt upgrade -y 
-apt autoremove -y
-apt-get install -y unattended-upgrades apt-listchanges
-echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
-dpkg-reconfigure -f noninteractive unattended-upgrades
-
 # Set BTCPayServer Environment
 export BTCPAY_HOST="btcpay.local"
 export REVERSEPROXY_DEFAULT_HOST="$BTCPAY_HOST"
@@ -88,3 +81,10 @@ cd btcpayserver-docker
 sleep 20
 
 . btcpay-setup.sh -i
+
+# Update RaspiOS & Enable Unattended Upgrades
+apt update && apt upgrade -y 
+apt autoremove -y
+apt-get install -y unattended-upgrades apt-listchanges
+echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
+dpkg-reconfigure -f noninteractive unattended-upgrades
