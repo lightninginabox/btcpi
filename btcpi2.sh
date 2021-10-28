@@ -1,10 +1,12 @@
 #!/bin/bash
 
+# Update RaspiOS & Enable Unattended Upgrades
 apt update && apt upgrade -y && apt autoremove
 apt-get install -y unattended-upgrades apt-listchanges
 echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
 dpkg-reconfigure -f noninteractive unattended-upgrades
 
+# Set BTCPayServer Environment
 export BTCPAY_HOST="btcpay.local"
 export REVERSEPROXY_DEFAULT_HOST="$BTCPAY_HOST"
 export NBITCOIN_NETWORK="mainnet"
@@ -14,6 +16,7 @@ export BTCPAYGEN_REVERSEPROXY="nginx"
 export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-more-memory;opt-save-storage-s"
 export BTCPAY_ENABLE_SSH=true
 
+# Configure Extenal Storage
 isSD=$(fdisk -l | grep -c "/dev/mmcblk0:")
 isNVMe=$(fdisk -l | grep -c "/dev/nvme0n1:")
 isUSB=$(fdisk -l | grep -c "/dev/sda:")
@@ -55,10 +58,13 @@ if [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
   ln -s /mnt/nvme/docker /var/lib/docker
 fi
 
+# Disable Swapfile
 dphys-swapfile swapoff
 dphys-swapfile uninstall
 update-rc.d dphys-swapfile remove
 systemctl disable dphys-swapfile
+
+# Configure Firewall
 ufw default deny incoming
 ufw default allow outgoing
 ufw allow from 10.0.0.0/8 to any port 22 proto tcp
@@ -74,6 +80,7 @@ ufw allow 8333/tcp
 ufw allow 9735/tcp
 yes | ufw enable
 
+# Insdtall BTCPayServer
 git clone https://github.com/btcpayserver/btcpayserver-docker
 cd btcpayserver-docker
 
