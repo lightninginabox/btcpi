@@ -1,9 +1,8 @@
 ## BTCPi (feat. BTCPayServer)
 Installing BTCPayServer is easy as Pi.
 
-DIY Bitcoin/Lightning Node for under $200!
-
-Looking for a Plug & Play Node? [Order for $314.59](https://lightninginabox.co/product/btcpi/)
+- DIY Bitcoin/Lightning Node for under $200!
+- Looking for a Plug & Play Node? [Order for $314.59](https://lightninginabox.co/product/btcpi/)
 
 ## Requirements 
 - 16 GB Micro SD Card
