@@ -6,9 +6,10 @@ Installing BTCPayServer is easy as Pi.
 - Order custom Lightning Shell from [CryptoCloaks](https://cryptocloaks.com).  Compatible with Triton & Lightning Shell. 
 
 ## Requirements 
-- 16 GB Micro SD Card
-- Raspberry Pi 4B (4GB RAM minimum)
-- External USB 3.0 SSD (120 GB for pruned node or 1TB for full complete blockchain).  
+- $11.32 [32 GB Micro SD Card] 
+- $119.99 [Vilros Raspberry Pi 4B 4GB Kit w/Aluminum case, fan and heat sink](https://www.amazon.com/Vilros-Raspberry-Fan-Cooled-Heavy-Duty-Aluminum/dp/B07XTRK8D4?ref_=ast_sto_dp&th=1&psc=1)
+- $36.99 [WD Green 240 GB SATA SSD](https://www.amazon.com/gp/product/B076Y374ZH/ref=ewc_pr_img_3?smid=A1GV4DXS40X1A5&psc=1) (Use 1TB for full blockchain)
+- $16.99 [UGreen SATA to USB 3.0 SSD Enclosure](https://www.amazon.com/gp/product/B07D2BHVBD/ref=ewc_pr_img_4?smid=AKXVBT49GGF3B&psc=1)
 
 ![BTCPi](https://i0.wp.com/lightninginabox.co/wp-content/uploads/2021/10/BTCPi.jpg?fit=1764%2C1561&ssl=1)
 
