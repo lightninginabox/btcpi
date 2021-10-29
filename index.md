@@ -21,20 +21,30 @@
 - Firewall configured to allow ports 22, 80, 443, 8333, 9735
 
 ## Don't forget to change your password!
-1. SSH into your BTCPi using [Putty](https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.76-installer.msi). 
-2. Username = pi, Password = raspberry
-3. type passwd
+1. Get the internal IP address of your BTCPayServer on your network by logging into your router and find 'btcpay' under attached devices. 
+1. SSH into your BTCPi using it's IP address using [Putty](https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.76-installer.msi). 
+2. Username = pi
+3. Password = raspberry
+4. type 'passwd' and follow the prompt. 
 
-While you're her get your Tor address so you can access your BTCPayServer from any where. 
-Type or paste the following command
+## Access your BTCPayServer using the [Tor Browser](https://www.torproject.org/download/) 
+
+1. SSH back into your BTCPi 
+2. Type or paste the following command
 ```
 
 sudo tail /var/lib/docker/volumes/generated_tor_servicesdir/_data/BTCPayServer/hostname
 
 ```
 
-Download and install the [Tor Browser](https://www.torproject.org/download/)
-Paste the .onion address into the Tor Browser. 
+6. Paste the .onion address into the Tor Browser.
+
+## Access your BTCPayServer over the clear net. 
+You must have an existing domain name and ideally a static IP address. 
+1. Forward ports 80, 443 and 9735 to the internal IP address of your BTCPi. 
+2. Create an 'A' record at your domain registrar that points to your external IP address. 
+3. Log into your BTCPayServer and change the domain under Server Settings -> Maintenance
+
 ## For more information visit [BTCPayServer.org](https://btcpayserver.org/)
 
 [BTCPi GitHub Repo](https://github.com/lightninginabox/btcpi)
