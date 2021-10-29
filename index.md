@@ -12,7 +12,7 @@
 4. Connect External USB SSD to Raspberry Pi 4B (4GB Ram minimum). 
 5. Power on Raspberry Pi. 
 
-## Wait 10 minutes and open browser to BTCPay.local
+## Wait 10 minutes and open browser to [BTCPay.local](http://btcpay.local)
 
 - The BTCPi image installs a basic BTCPayServer configuration (Bitcoin w/pruning, LND, RTL). 
 - Hostname - btcpay
