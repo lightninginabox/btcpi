@@ -3,15 +3,12 @@ Installing BTCPayServer is easy as Pi.
 
 - DIY Bitcoin/Lightning Node for under $200!
 - Looking for a Plug & Play Node? [Order for $314.59](https://lightninginabox.co/product/btcpi/)
+- Order custom Lightning Shell from [CryptoCloaks](https://cryptocloaks.com).  Compatible with Triton & Lightning Shell. 
 
 ## Requirements 
 - 16 GB Micro SD Card
 - Raspberry Pi 4B (4GB RAM minimum)
 - External USB 3.0 SSD (120 GB for pruned node or 1TB for full complete blockchain).  
-
-
-## Optional 
-- Order custom Lightning Shell from [CryptoCloaks](https://cryptocloaks.com).  Compatible with Triton & Lightning Shell. 
 
 ![BTCPi](https://i0.wp.com/lightninginabox.co/wp-content/uploads/2021/10/BTCPi.jpg?fit=1764%2C1561&ssl=1)
 
