@@ -16,8 +16,8 @@ Installing BTCPayServer is easy as Pi.
 ## Wait 10 minutes and open browser to BTCPay.local
 
 - The BTCPi image installs a basic BTCPayServer configuration (Bitcoin w/pruning, LND, RTL). 
-- Hostname - btcpay. 
-- Username - pi, default password - raspberry. 
+- Hostname - btcpay
+- Username - pi, default password - raspberry
 - SSH Enabled. 
 - Firewall configured to allow ports 22, 80, 443, 8333, 9735
 
