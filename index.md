@@ -3,7 +3,7 @@
 Requirements 
 - 16 GB Micro SD Card
 - Raspberry Pi 4B (4GB RAM minimum)
-- External USB 3.0 SSD (250 GB for pruned node or 1TB for full complete blockchain).  
+- External USB 3.0 SSD (120 GB for pruned node or 1TB for full complete blockchain).  
 
 Install BTCPayServer in 5 easy steps. 
 1. Download compressed [BTCPi](https://github.com/lightninginabox/btcpi/suites/4196139528/artifacts/108237508) image (64 bit RaspiOS).
@@ -14,8 +14,10 @@ Install BTCPayServer in 5 easy steps.
 
 Wait 10 minutes and open browser to BTCPay.local
 
-- The BTCPi image installs BTCPayServer with Bitcoin mainnet, LND and pruning (50GB required). 
-- The hostname is btcpay. 
-- Default username - pi, default password - raspberry. 
+- The BTCPi image installs a basic BTCPayServer configuration (Bitcoin w/pruning, LND, RTL). 
+- Hostname - btcpay. 
+- Username - pi, default password - raspberry. 
 - SSH Enabled. 
 - Firewall configured to allow ports 22, 80, 443, 8333, 9735
+
+Don't forget to change your password!
