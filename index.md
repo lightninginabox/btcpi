@@ -25,7 +25,12 @@
 2. Username = pi, Password = raspberry
 3. type passwd
 
-## [GitHub Repo](https://github.com/lightninginabox/btcpi)
+## For more information visit [BTCPayServer](https://docs.btcpayserver.org/)
+
+## BTCPi 
+[GitHub Repo](https://github.com/lightninginabox/btcpi)
+
+The image runs the following script on first boot. 
 
 ```
 
