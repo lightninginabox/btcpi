@@ -30,8 +30,11 @@ if [ ${isSD} -eq 1 ] && [ ${isUSB} -eq 1 ]; then
   echo "UUID=$UUID /mnt/usb ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
   mount /dev/sda1 /mnt/usb
   sleep 5
-  mkdir -p /mnt/usb/docker
-  ln -s /mnt/usb/docker /var/lib/docker
+  isUSBMounted=$(df | grep -c "/dev/sda1")
+  if [ ${isUSBMounted} -eq 1 ]; then
+    mkdir -p /mnt/usb/docker
+    ln -s /mnt/usb/docker /var/lib/docker
+  fi
 fi
 # When booting from SD card with NVMe drive attached
 if [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
@@ -48,8 +51,11 @@ if [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
   echo "UUID=$UUID /mnt/nvme ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
   mount /dev/nvme0n1p1 /mnt/nvme
   sleep 5
-  mkdir -p /mnt/nvme/docker
-  ln -s /mnt/nvme/docker /var/lib/docker
+  isNVMeMounted=$(df | grep -c "/dev/nvme0n1p1")
+  if [ ${isNVMeMounted} -eq 1 ]; then
+    mkdir -p /mnt/nvme/docker
+    ln -s /mnt/nvme/docker /var/lib/docker
+  fi
 fi
 
 # Disable Swapfile
@@ -74,13 +80,15 @@ ufw allow 8333/tcp
 ufw allow 9735/tcp
 yes | ufw enable
 
-# Insdtall BTCPayServer
+if [[ ${isUSBMounted} -eq 1 || ${isNVMeMounted} -eq 1 ]]; then
+# Install BTCPayServer
 git clone https://github.com/btcpayserver/btcpayserver-docker
 cd btcpayserver-docker
 
 sleep 20
 
 . btcpay-setup.sh -i
+fi
 
 # Update RaspiOS & Enable Unattended Upgrades
 apt update && apt upgrade -y 
