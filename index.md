@@ -1,4 +1,4 @@
-## BTCPi - BTCPayServer easy as Pi.
+## BTCPi - BTCPayServer is easy as Pi.
 
 ## Requirements 
 - 16 GB Micro SD Card
