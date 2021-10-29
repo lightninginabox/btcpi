@@ -21,7 +21,7 @@
 - Firewall configured to allow ports 22, 80, 443, 8333, 9735
 
 ## Don't forget to change your password!
-1. Get the internal IP address of your BTCPayServer on your network by logging into your router and find 'btcpay' under attached devices. 
+1. Get the internal IP address of your BTCPayServer on your network by logging into your router and looking for 'btcpay' under attached devices. 
 1. SSH into your BTCPi using it's IP address using [Putty](https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.76-installer.msi). 
 2. Username = pi
 3. Password = raspberry
