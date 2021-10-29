@@ -38,7 +38,7 @@ sudo tail /var/lib/docker/volumes/generated_tor_servicesdir/_data/BTCPayServer/h
 
 ```
 
-6. Paste the .onion address into the Tor Browser.
+3. Paste the .onion address into the Tor Browser.
 
 ## Access your BTCPayServer over the clear net. 
 You must have an existing domain name and ideally a static IP address. 
