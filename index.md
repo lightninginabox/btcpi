@@ -1,4 +1,4 @@
-## BTCPi.com 
+## BTCPi - The easy way to install BTCPayServer 
 
 Requirements 
 - 16 GB Micro SD Card
