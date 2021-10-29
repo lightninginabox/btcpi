@@ -31,6 +31,7 @@
 
 1. SSH back into your BTCPi 
 2. Type or paste the following command
+
 ```
 
 sudo tail /var/lib/docker/volumes/generated_tor_servicesdir/_data/BTCPayServer/hostname
