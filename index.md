@@ -1,4 +1,4 @@
-## BTCPi 
+## BTCPi (feat. BTCPayServer)
 Installing BTCPayServer is easy as Pi.
 
 ## Requirements 
