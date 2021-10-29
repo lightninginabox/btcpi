@@ -25,7 +25,7 @@
 2. Username = pi, Password = raspberry
 3. type passwd
 
-## For more information visie [BTCPayServer.org](https://btcpayserver.org/)
+## For more information visit [BTCPayServer.org](https://btcpayserver.org/)
 
 [BTCPi GitHub Repo](https://github.com/lightninginabox/btcpi)
 
