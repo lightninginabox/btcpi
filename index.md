@@ -5,6 +5,7 @@
 - Raspberry Pi 4B (4GB RAM minimum)
 - External USB 3.0 SSD (120 GB for pruned node or 1TB for full complete blockchain).  
 
+DIY Bitcoin/Lightning Node for under $200
 ![BTCPi](https://i0.wp.com/lightninginabox.co/wp-content/uploads/2021/10/BTCPi.jpg?fit=1764%2C1561&ssl=1)
 
 ## Install BTCPayServer in 5 easy steps. 
