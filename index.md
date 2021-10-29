@@ -6,6 +6,7 @@
 - External USB 3.0 SSD (120 GB for pruned node or 1TB for full complete blockchain).  
 
 ## Install BTCPayServer in 5 easy steps. 
+**Warning! Your external SSD will be reformatted, make sure it's empty or doesn't contain anything you need to save.** 
 1. Download compressed [BTCPi](https://gateway.pinata.cloud/ipfs/QmeBKLyw9UDVf1QVpa8Y2XGkZm7LzXYeZqhJWGcBp8NvJb) image (based on the 64 bit RaspiOS).
 2. Unzip image. 
 3. Flash Image to SD card using [Belena Etcher](https://www.balena.io/etcher/) or [Rufus](https://rufus.ie/en/). 
