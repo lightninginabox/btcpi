@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Set BTCPayServer Environment
+# Set BTCPayServer Environment Variables
 export BTCPAY_HOST="btcpay.local"
 export REVERSEPROXY_DEFAULT_HOST="$BTCPAY_HOST"
 export NBITCOIN_NETWORK="mainnet"
@@ -10,12 +10,12 @@ export BTCPAYGEN_REVERSEPROXY="nginx"
 export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-more-memory;opt-save-storage-s"
 export BTCPAY_ENABLE_SSH=true
 
-# Configure Extenal Storage
+# Configure External Storage
 isSD=$(fdisk -l | grep -c "/dev/mmcblk0:")
 isNVMe=$(fdisk -l | grep -c "/dev/nvme0n1:")
 isUSB=$(fdisk -l | grep -c "/dev/sda:")
 
-# When booting from SD card with attached USB drive
+# If booting from SD card with USB drive attached.
 if [ ${isSD} -eq 1 ] && [ ${isUSB} -eq 1 ]; then
   mkdir -p /mnt/usb
   sfdisk --delete /dev/sda
@@ -36,7 +36,8 @@ if [ ${isSD} -eq 1 ] && [ ${isUSB} -eq 1 ]; then
     ln -s /mnt/usb/docker /var/lib/docker
   fi
 fi
-# When booting from SD card with NVMe drive attached
+
+# If booting from SD card with NVMe drive attached.
 if [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
   mkdir -p /mnt/nvme
   sfdisk --delete /dev/nvme0n1
@@ -80,8 +81,8 @@ ufw allow 8333/tcp
 ufw allow 9735/tcp
 yes | ufw enable
 
-if [[ ${isUSBMounted} -eq 1 || ${isNVMeMounted} -eq 1 ]]; then
 # Install BTCPayServer
+if [[ ${isUSBMounted} -eq 1 || ${isNVMeMounted} -eq 1 ]]; then
 git clone https://github.com/btcpayserver/btcpayserver-docker
 cd btcpayserver-docker
 
