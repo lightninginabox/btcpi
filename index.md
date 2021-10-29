@@ -25,6 +25,16 @@
 2. Username = pi, Password = raspberry
 3. type passwd
 
+While you're her get your Tor address so you can access your BTCPayServer from any where. 
+Type or paste the following command
+```
+
+sudo tail /var/lib/docker/volumes/generated_tor_servicesdir/_data/BTCPayServer/hostname
+
+```
+
+Download and install the [Tor Browser](https://www.torproject.org/download/)
+Paste the .onion address into the Tor Browser. 
 ## For more information visit [BTCPayServer.org](https://btcpayserver.org/)
 
 [BTCPi GitHub Repo](https://github.com/lightninginabox/btcpi)
