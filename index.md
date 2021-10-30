@@ -18,10 +18,10 @@ DIY Bitcoin/Lightning Node for under $200!
 
 ## Install BTCPayServer in 5 easy steps. 
 **Warning! Your external SSD will be reformatted, make sure your drive does not contain anything you plan to keep.** 
-1. Download compressed [BTCPi](https://gateway.pinata.cloud/ipfs/QmeBKLyw9UDVf1QVpa8Y2XGkZm7LzXYeZqhJWGcBp8NvJb) image (based on the 64 bit RaspiOS).
+1. Download compressed [BTCPi](https://gateway.pinata.cloud/ipfs/QmeBKLyw9UDVf1QVpa8Y2XGkZm7LzXYeZqhJWGcBp8NvJb).
 2. Unzip image. 
-3. Flash Image to SD card using [Belena Etcher](https://www.balena.io/etcher/) or [Rufus](https://rufus.ie/en/). 
-4. Connect External USB SSD to Raspberry Pi 4B (4GB Ram minimum). 
+3. Flash image to SD card using [Belena Etcher](https://www.balena.io/etcher/) or [Rufus](https://rufus.ie/en/). 
+4. Connect External USB SSD to Raspberry Pi (make sure you use one of the blue USB 3.0 ports). 
 5. Power on Raspberry Pi. 
 
 ## Wait 10 minutes and open browser to [BTCPay.local](http://btcpay.local)
