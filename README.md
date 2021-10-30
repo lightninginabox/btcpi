@@ -4,8 +4,8 @@
 - [WD Green 240 GB SATA SSD](https://www.amazon.com/gp/product/B076Y374ZH/ref=ewc_pr_img_3?smid=A1GV4DXS40X1A5&psc=1) (Use 1TB for full blockchain) ~ $36.99
 - [UGreen SATA to USB 3.0 SSD Enclosure](https://www.amazon.com/gp/product/B07D2BHVBD/ref=ewc_pr_img_4?smid=AKXVBT49GGF3B&psc=1) ~ $16.99
 - Total Cost ~ $185.28
-- 
-DIY Bitcoin/Lightning Node for under $200!
+
+## DIY Bitcoin/Lightning Node for under $200!
 
 ## Install BTCPayServer in 5 easy steps. 
 **Warning! Your external SSD will be reformatted, make sure your drive does not contain anything you plan to keep.** 
