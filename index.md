@@ -35,11 +35,11 @@ DIY Bitcoin/Lightning Node for under $200!
 - Firewall configured to allow ports 22 (internal networks only), 80, 443, 8333, 9735
 
 ## Don't forget to change your password!
-1. Obtain the internal IP address of your BTCPayServer by logging into your router and looking for 'btcpay' under attached devices. 
-1. SSH into your BTCPi using it's IP address with [Putty](https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.76-installer.msi). 
-2. Username = pi
-3. Password = raspberry
-4. type 'passwd' and follow the prompts to change your password. 
+1. Obtain the internal IP address of your BTCPayServer by logging into your router and looking for 'btcpay' under attached devices. If you don't have access to your router try [Angry IP Scanner](https://angryip.org/).
+2. SSH into your BTCPi using it's IP address with [Putty](https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.76-installer.msi). 
+3. Username = pi
+4. Password = raspberry
+5. type 'passwd' and follow the prompts to change your password. 
 
 ## Access BTCPayServer using the [Tor Browser](https://www.torproject.org/download/) 
 
