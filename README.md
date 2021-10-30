@@ -8,7 +8,7 @@
 - [UGreen SATA to USB 3.0 SSD Enclosure](https://www.amazon.com/gp/product/B07D2BHVBD/ref=ewc_pr_img_4?smid=AKXVBT49GGF3B&psc=1) ~ $16.99
 - Total Cost ~ $149.24
 
-## DIY Bitcoin/Lightning Node for under around $150.00!
+## DIY Bitcoin/Lightning Node for about $150.00!
 
 ## Install BTCPayServer in 5 easy steps. 
 **Warning! Your external SSD will be reformatted, make sure your drive does not contain anything you plan to keep.** 
