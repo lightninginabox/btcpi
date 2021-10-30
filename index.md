@@ -16,7 +16,7 @@ Installing BTCPayServer is easy as Pi.
 DIY Bitcoin/Lightning Node for under $200!
 
 ## Install BTCPayServer in 5 easy steps. 
-**Warning! Your external SSD will be reformatted, make sure youe drive does not contain anything you plan to keep.** 
+**Warning! Your external SSD will be reformatted, make sure your drive does not contain anything you plan to keep.** 
 1. Download compressed [BTCPi](https://gateway.pinata.cloud/ipfs/QmeBKLyw9UDVf1QVpa8Y2XGkZm7LzXYeZqhJWGcBp8NvJb) image (based on the 64 bit RaspiOS).
 2. Unzip image. 
 3. Flash Image to SD card using [Belena Etcher](https://www.balena.io/etcher/) or [Rufus](https://rufus.ie/en/). 
