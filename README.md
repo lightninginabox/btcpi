@@ -3,6 +3,7 @@
 ## Recommended Hardware
 - [SanDisk Extreme 32 GB Micro SD Card](https://www.amazon.com/gp/product/B06XWMQ81P/ref=ewc_pr_img_1?smid=A3QF16EH69HELL&psc=1) ~ $11.32
 - [Vilros Raspberry Pi 4B 4GB Kit w/Aluminum case, fan and heat sink](https://www.amazon.com/Vilros-Raspberry-Fan-Cooled-Heavy-Duty-Aluminum/dp/B07XTRK8D4?ref_=ast_sto_dp&th=1&psc=1) ~ $119.99
+    - or [Raspberry Pi 4B w/4GB Ram](https://www.canakit.com/raspberry-pi-4-basic-kit.html?defpid=4508) and passive cooling case [Geekworm](https://www.amazon.com/Geekworm-Raspberry-Computer-Aluminum-Compatible/dp/B07VD568FB/ref=sr_1_1_sspa?crid=15LX9RNYD75ON&dchild=1&keywords=geekworm+raspberry+pi+4+case&qid=1635620307&s=electronics&sprefix=geekwo%2Celectronics%2C172&sr=1-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzT1lIWUlSVFBIUU43JmVuY3J5cHRlZElkPUEwMjk0NjI3MlNZUEtZTDlJRkFTMiZlbmNyeXB0ZWRBZElkPUEwOTgyOTkxOE9EWFFHM1pQMzNWJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==)
 - [WD Green 240 GB SATA SSD](https://www.amazon.com/gp/product/B076Y374ZH/ref=ewc_pr_img_3?smid=A1GV4DXS40X1A5&psc=1) (Use 1TB for full blockchain) ~ $36.99
 - [UGreen SATA to USB 3.0 SSD Enclosure](https://www.amazon.com/gp/product/B07D2BHVBD/ref=ewc_pr_img_4?smid=AKXVBT49GGF3B&psc=1) ~ $16.99
 - Total Cost ~ $185.28
