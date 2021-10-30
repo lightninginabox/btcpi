@@ -45,6 +45,7 @@ DIY Bitcoin/Lightning Node for under $200!
 
 1. SSH back into your BTCPi 
 2. Type or paste the following command
+3. Paste the .onion address into the Tor Browser.
 
 ```
 
@@ -52,7 +53,7 @@ sudo tail /var/lib/docker/volumes/generated_tor_servicesdir/_data/BTCPayServer/h
 
 ```
 
-3. Paste the .onion address into the Tor Browser.
+
 
 ## Access your BTCPayServer over the clear net. 
 You must have an existing domain name and ideally a static IP address. 
