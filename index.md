@@ -32,7 +32,7 @@ DIY Bitcoin/Lightning Node for under $200!
 - SSH Enabled
   - Username - pi
   - Password - raspberry
-- Firewall configured to allow ports 22, 80, 443, 8333, 9735
+- Firewall configured to allow ports 22 (internal networks only), 80, 443, 8333, 9735
 
 ## Don't forget to change your password!
 1. Obtain the internal IP address of your BTCPayServer by logging into your router and looking for 'btcpay' under attached devices. 
