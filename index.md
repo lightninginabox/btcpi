@@ -11,7 +11,7 @@ Installing [BTCPayServer](https://btcpayserver.org) is easy as Pi.
 ![BTCPi](https://i0.wp.com/lightninginabox.co/wp-content/uploads/2021/10/BTCPi.jpg?fit=1764%2C1561&ssl=1)
 DIY Bitcoin/Lightning Node for under $200!
 
-- Looking for a Plug & Play Node? [Order from Lightning in a Box $314.59](https://lightninginabox.co/product/btcpi/)
+- Looking for a Plug & Play Node? [Order from Lightning in a Box - $314.59](https://lightninginabox.co/product/btcpi/)
 - Get a custom shell from [CryptoCloaks](https://cryptocloaks.com).  Compatible with Triton & Lightning Shell.
 
 ## Install BTCPayServer in 5 easy steps. 
