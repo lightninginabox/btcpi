@@ -56,10 +56,16 @@ sudo tail /var/lib/docker/volumes/generated_tor_servicesdir/_data/BTCPayServer/h
 
 
 ## Access your BTCPayServer over the clear net. 
-You must have an existing domain name and ideally a static IP address. 
+There a few options for getting your BTCPayServer on the mainnet. 
+
+# If you already have a domain name and static IP address.  
 1. Forward ports 80, 443 and 9735 to the internal IP address of your BTCPi. 
 2. Create an 'A' record at your domain registrar that points to your external IP address. 
 3. Log into your BTCPayServer and change the domain under Server Settings -> Maintenance
+
+# If you prefer to keep your BTCPayServer behind Tor but want to access it on the clear net
+1. Follow the [Reverse Proxy to Tor](https://docs.btcpayserver.org/Deployment/ReverseProxyToTor/#reverse-proxy-to-tor) instructions. 
+2. or sign up for the [BTCPayServer2Tor](https://lightninginabox.co/product/btcpayserver-reverse-proxy-to-tor/) from Lightning In a Box. 
 
 ## For more information visit [BTCPayServer.org](https://btcpayserver.org/)
 
