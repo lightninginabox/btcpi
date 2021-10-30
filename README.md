@@ -59,7 +59,8 @@ You must have an existing domain name and ideally a static IP address.
 
 ## For more information visit [BTCPayServer.org](https://btcpayserver.org/)
 
-# pi-bootstrap
+
+# Image created using pi-bootstrap
 
 A repository that shows how to use [Pimod](https://github.com/Nature40/pimod.git) and Github Actions to create a ready-to-use Raspberry Pi image that includes connectivity to your home Wi-Fi, custom packages and build steps without opening a terminal or any manual setup. You can do all of this directly within the Github UI, which significantly lowers the barrier of entry for novice users, who don't need to understand a lot of the technical details.
 
