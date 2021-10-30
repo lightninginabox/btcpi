@@ -4,11 +4,11 @@ Installing [BTCPayServer](https://btcpayserver.org) is easy as Pi.
 - DIY Bitcoin/Lightning Node under $200! 
 
 ## Recomended Hardware
-- [SanDisk Extreme 32 GB Micro SD Card](https://www.amazon.com/gp/product/B06XWMQ81P/ref=ewc_pr_img_1?smid=A3QF16EH69HELL&psc=1) - $11.32
-- [Vilros Raspberry Pi 4B 4GB Kit w/Aluminum case, fan and heat sink](https://www.amazon.com/Vilros-Raspberry-Fan-Cooled-Heavy-Duty-Aluminum/dp/B07XTRK8D4?ref_=ast_sto_dp&th=1&psc=1) - $119.99
-- [WD Green 240 GB SATA SSD](https://www.amazon.com/gp/product/B076Y374ZH/ref=ewc_pr_img_3?smid=A1GV4DXS40X1A5&psc=1) (Use 1TB for full blockchain) - $36.99
-- [UGreen SATA to USB 3.0 SSD Enclosure](https://www.amazon.com/gp/product/B07D2BHVBD/ref=ewc_pr_img_4?smid=AKXVBT49GGF3B&psc=1) - $16.99
-- Total Cost = $185.28
+- [SanDisk Extreme 32 GB Micro SD Card](https://www.amazon.com/gp/product/B06XWMQ81P/ref=ewc_pr_img_1?smid=A3QF16EH69HELL&psc=1) ~ $11.32
+- [Vilros Raspberry Pi 4B 4GB Kit w/Aluminum case, fan and heat sink](https://www.amazon.com/Vilros-Raspberry-Fan-Cooled-Heavy-Duty-Aluminum/dp/B07XTRK8D4?ref_=ast_sto_dp&th=1&psc=1) ~ $119.99
+- [WD Green 240 GB SATA SSD](https://www.amazon.com/gp/product/B076Y374ZH/ref=ewc_pr_img_3?smid=A1GV4DXS40X1A5&psc=1) (Use 1TB for full blockchain) ~ $36.99
+- [UGreen SATA to USB 3.0 SSD Enclosure](https://www.amazon.com/gp/product/B07D2BHVBD/ref=ewc_pr_img_4?smid=AKXVBT49GGF3B&psc=1) ~ $16.99
+- Total Cost ~ $185.28
 
 ![BTCPi](https://i0.wp.com/lightninginabox.co/wp-content/uploads/2021/10/BTCPi.jpg?fit=1764%2C1561&ssl=1)
 DIY Bitcoin/Lightning Node for under $200!
