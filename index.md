@@ -45,7 +45,7 @@ DIY Bitcoin/Lightning Node for under $200!
 
 1. SSH back into your BTCPi 
 2. Type or paste the following command
-3. Paste the .onion address into the Tor Browser.
+3. Copy and paste the .onion address into the Tor Browser.
 
 ```
 
