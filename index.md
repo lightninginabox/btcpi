@@ -1,9 +1,7 @@
 ## BTCPi (feat. BTCPayServer)
 Installing [BTCPayServer](https://btcpayserver.org) is easy as Pi.
 
-- DIY Bitcoin/Lightning Node for under $200!
-- Looking for a Plug & Play Node? [Order for $314.59](https://lightninginabox.co/product/btcpi/)
-- Order custom Lightning Shell from [CryptoCloaks](https://cryptocloaks.com).  Compatible with Triton & Lightning Shell. 
+- DIY Bitcoin/Lightning Node for under $200! 
 
 ## Recomended Hadware
 - [SanDisk Extreme 32 GB Micro SD Card](https://www.amazon.com/gp/product/B06XWMQ81P/ref=ewc_pr_img_1?smid=A3QF16EH69HELL&psc=1) - $11.32
@@ -14,6 +12,9 @@ Installing [BTCPayServer](https://btcpayserver.org) is easy as Pi.
 
 ![BTCPi](https://i0.wp.com/lightninginabox.co/wp-content/uploads/2021/10/BTCPi.jpg?fit=1764%2C1561&ssl=1)
 DIY Bitcoin/Lightning Node for under $200!
+
+- Looking for a Plug & Play Node? [Order for $314.59](https://lightninginabox.co/product/btcpi/)
+- Order custom Lightning Shell from [CryptoCloaks](https://cryptocloaks.com).  Compatible with Triton & Lightning Shell.
 
 ## Install BTCPayServer in 5 easy steps. 
 **Warning! Your external SSD will be reformatted, make sure your drive does not contain anything you plan to keep.** 
