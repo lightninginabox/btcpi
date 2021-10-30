@@ -1,13 +1,12 @@
 #!/bin/bash
-
 # Set BTCPayServer Environment Variables
 export BTCPAY_HOST="btcpay.local"
 export REVERSEPROXY_DEFAULT_HOST="$BTCPAY_HOST"
 export NBITCOIN_NETWORK="mainnet"
 export BTCPAYGEN_CRYPTO1="btc"
-export BTCPAYGEN_LIGHTNING="lnd"
+export BTCPAYGEN_LIGHTNING="clightning"
 export BTCPAYGEN_REVERSEPROXY="nginx"
-export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-more-memory;opt-save-storage-s"
+export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-add-pihole,opt-add-electrumx,opt-add-btctransmuter,opt-add-joinmarket"
 export BTCPAY_ENABLE_SSH=true
 
 # Configure External Storage
