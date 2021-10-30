@@ -1,8 +1,6 @@
 ## BTCPi (feat. BTCPayServer)
 Installing [BTCPayServer](https://btcpayserver.org) is easy as Pi.
 
-- DIY Bitcoin/Lightning Node under $200! 
-
 ## Recomended Hardware
 - [SanDisk Extreme 32 GB Micro SD Card](https://www.amazon.com/gp/product/B06XWMQ81P/ref=ewc_pr_img_1?smid=A3QF16EH69HELL&psc=1) ~ $11.32
 - [Vilros Raspberry Pi 4B 4GB Kit w/Aluminum case, fan and heat sink](https://www.amazon.com/Vilros-Raspberry-Fan-Cooled-Heavy-Duty-Aluminum/dp/B07XTRK8D4?ref_=ast_sto_dp&th=1&psc=1) ~ $119.99
