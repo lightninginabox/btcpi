@@ -22,7 +22,7 @@ DIY Bitcoin/Lightning Node for under $200!
 4. Connect External USB SSD to Raspberry Pi (make sure you use one of the blue USB 3.0 ports). 
 5. Power on Raspberry Pi. 
 
-## Wait 10 minutes and open browser to [BTCPay.local](http://btcpay.local)
+## Wait 10 minutes, open browser and go to [BTCPay.local](http://btcpay.local)
 
 - The BTCPi image installs a minimal BTCPayServer
     - Bitcoin Core w/pruning
