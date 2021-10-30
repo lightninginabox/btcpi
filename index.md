@@ -26,20 +26,24 @@ DIY Bitcoin/Lightning Node for under $200!
 
 ## Wait 10 minutes and open browser to [BTCPay.local](http://btcpay.local)
 
-- The BTCPi image installs a basic BTCPayServer configuration (Bitcoin w/pruning, LND, RTL). 
+- The BTCPi image installs a minimal BTCPayServer
+    - Bitcoin Core w/pruning
+    - Lightning (LND)
+    - [Ride the Lightning](https://github.com/Ride-The-Lightning/RTL) 
 - Hostname - btcpay
-- Username - pi, default password - raspberry
-- SSH Enabled. 
+- SSH Enabled
+  - Username - pi
+  - Password - raspberry
 - Firewall configured to allow ports 22, 80, 443, 8333, 9735
 
 ## Don't forget to change your password!
-1. Get the internal IP address of your BTCPayServer on your network by logging into your router and looking for 'btcpay' under attached devices. 
+1. Obtain the internal IP address of your BTCPayServer by logging into your router and looking for 'btcpay' under attached devices. 
 1. SSH into your BTCPi using it's IP address with [Putty](https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.76-installer.msi). 
 2. Username = pi
 3. Password = raspberry
-4. type 'passwd' and follow the prompt. 
+4. type 'passwd' and follow the prompts to change your password. 
 
-## Access your BTCPayServer using the [Tor Browser](https://www.torproject.org/download/) 
+## Access BTCPayServer using the [Tor Browser](https://www.torproject.org/download/) 
 
 1. SSH back into your BTCPi 
 2. Type or paste the following command
