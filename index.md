@@ -13,6 +13,7 @@ Installing BTCPayServer is easy as Pi.
 - Total Cost = $185.28
 
 ![BTCPi](https://i0.wp.com/lightninginabox.co/wp-content/uploads/2021/10/BTCPi.jpg?fit=1764%2C1561&ssl=1)
+DIY Bitcoin/Lightning Node for under $200!
 
 ## Install BTCPayServer in 5 easy steps. 
 **Warning! Your external SSD will be reformatted, make sure it contain anything you plan to keep.** 
