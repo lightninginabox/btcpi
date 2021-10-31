@@ -21,6 +21,8 @@ if [ ${isSD} -eq 1 ] && [ ${isUSB} -eq 1 ]; then
   sleep 5
   sfdisk --dump /dev/sda > sda.dump
   cat sda.dump | sfdisk /dev/sda
+  sleep 5
+  yes | mkfs.ext4 /dev/sda1
   sleep 10
   UUID="$(sudo blkid -s UUID -o value /dev/sda1)"
   echo "UUID=$UUID /mnt/usb ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
@@ -40,6 +42,8 @@ if [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
   sleep 5
   sfdisk --dump /dev/nvme0n1 > nvme.dump
   cat nvme.dump | sfdisk /dev/nvme0n1
+  sleep 5
+  yes | mkfs.ext4 /dev/nvme0n1p1
   sleep 10
   UUID="$(sudo blkid -s UUID -o value /dev/nvme0n1p1)"
   echo "UUID=$UUID /mnt/nvme ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
