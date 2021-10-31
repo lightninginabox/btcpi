@@ -41,9 +41,7 @@ if [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
   mkdir -p /mnt/nvme
   sfdisk --delete /dev/nvme0n1
   sleep 5
-  parted -s -a optimal /dev/nvme0n1 mklabel gpt
-  sleep 5
-  parted -s -a optimal /dev/nvme0n1 mkpart primary ext4 0% 100%
+  parted -s -a optimal /dev/nvme0n1 mklabel gpt mkpart primary ext4 0% 100%
   sleep 5
   yes | mkfs.ext4 /dev/nvme0n1p1
   sleep 10
