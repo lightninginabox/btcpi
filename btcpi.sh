@@ -10,6 +10,7 @@ export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-add-pihole,opt-add-electrumx,opt-add-
 export BTCPAY_ENABLE_SSH=true
 
 # Configure External Storage
+mkdir -p /mnt/hdd
 isSD=$(fdisk -l | grep -c "/dev/mmcblk0:")
 isNVMe=$(fdisk -l | grep -c "/dev/nvme0n1:")
 isUSB=$(fdisk -l | grep -c "/dev/sda:")
