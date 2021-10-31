@@ -39,11 +39,8 @@ fi
 # If booting from SD card with NVMe drive attached.
 if [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
   mkdir -p /mnt/nvme
-  sfdisk --delete /dev/nvme0n1
-  sleep 5
-  parted -s -a optimal /dev/nvme0n1 mklabel gpt mkpart primary ext4 0% 100%
-  sleep 5
-  yes | mkfs.ext4 /dev/nvme0n1p1
+  sfdisk --dump /dev/nvme0n1 > nvme.dump
+  cat nvme.dump | sfdisk /dev/nvme0n1
   sleep 10
   UUID="$(sudo blkid -s UUID -o value /dev/nvme0n1p1)"
   echo "UUID=$UUID /mnt/nvme ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
