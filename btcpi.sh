@@ -19,7 +19,7 @@ isUSB=$(fdisk -l | grep -c "/dev/sda:")
 if [ ${isSD} -eq 1 ] && [ ${isUSB} -eq 1 ]; then
   hdd="sda"
   partition1="sda1"
-elif [ ${isSD} -eq 1] && [ ${isNVMe} -eq 1]; then
+elif [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
   hdd="nvme0n1"
   partition1="nvme0n1p1"
 else
