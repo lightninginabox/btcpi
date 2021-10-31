@@ -107,14 +107,10 @@ ufw allow 9735/tcp
 yes | ufw enable
 
 # Install BTCPayServer
-if [[ ${isUSBMounted} -eq 1 || ${isNVMeMounted} -eq 1 ]]; then
 git clone https://github.com/btcpayserver/btcpayserver-docker
 cd btcpayserver-docker
-
 sleep 20
-
 . btcpay-setup.sh -i
-fi
 
 # Update RaspiOS & Enable Unattended Upgrades
 apt update && apt upgrade -y 
