@@ -37,7 +37,7 @@ fi
 partitions=$(lsblk | grep -c "─${hdd}")
 if [ ${partitions} -gt 0 ]; then
   exit 1
-  fi
+fi
 
 parted -s /dev/${hdd} mklabel gpt
 sleep 2
@@ -58,7 +58,7 @@ loopcount=0
   if [ ${loopcount} -gt 10 ]; then
     exit 1
     fi
-  done
+ done
 
 mkfs.ext4 -F -L DOCKER /dev/${partition1} 
 loopdone=0
@@ -72,7 +72,7 @@ while [ ${loopdone} -eq 0 ]
  if [ ${loopcount} -gt 10 ]; then
          exit 1
        fi
- done
+done
  
  UUID="$(sudo blkid -s UUID -o value /dev/${partition1})"
   echo "UUID=$UUID /mnt/hdd ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
@@ -83,7 +83,6 @@ while [ ${loopdone} -eq 0 ]
     mkdir -p /mnt/hdd/docker
     ln -s /mnt/hdd/docker /var/lib/docker
   fi
-fi
 
 # Disable Swapfile
 dphys-swapfile swapoff
