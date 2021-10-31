@@ -17,13 +17,8 @@ isUSB=$(fdisk -l | grep -c "/dev/sda:")
 # If booting from SD card with USB drive attached.
 if [ ${isSD} -eq 1 ] && [ ${isUSB} -eq 1 ]; then
   mkdir -p /mnt/usb
-  sfdisk --delete /dev/sda
-  sleep 5
-  parted -s /dev/sda mklabel gpt
-  sleep 5
-  parted /dev/sda mkpart primary ext4 0% 100%
-  sleep 5
-  yes | mkfs.ext4 /dev/sda1
+  sfdisk --dump /dev/sda > sda.dump
+  cat sda.dump | sfdisk /dev/sda
   sleep 10
   UUID="$(sudo blkid -s UUID -o value /dev/sda1)"
   echo "UUID=$UUID /mnt/usb ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
