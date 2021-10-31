@@ -27,8 +27,10 @@ else
 fi
 
 sfdisk --delete /dev/${hdd}
+sync
 sleep 4
 sudo wipefs -a /dev/${hdd}
+sync
 sleep 4
 partitions=$(lsblk | grep -c "─${hdd}")
 if [ ${partitions} -gt 0 ]; then
