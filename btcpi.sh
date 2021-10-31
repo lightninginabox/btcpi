@@ -19,6 +19,8 @@ if [ ${isSD} -eq 1 ] && [ ${isUSB} -eq 1 ]; then
   mkdir -p /mnt/usb
   sfdisk --delete /dev/sda
   sleep 5
+  wipefs -a /dev/sda
+  sleep 5
   sfdisk --dump /dev/sda > sda.dump
   cat sda.dump | sfdisk /dev/sda
   sleep 5
@@ -38,7 +40,9 @@ fi
 # If booting from SD card with NVMe drive attached.
 if [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
   mkdir -p /mnt/nvme
-  sfdisk --delete /dev/sda
+  sfdisk --delete /dev/nvme0n1
+  sleep 5
+  wipefs -a /dev/nvme0n1
   sleep 5
   sfdisk --dump /dev/nvme0n1 > nvme.dump
   cat nvme.dump | sfdisk /dev/nvme0n1
