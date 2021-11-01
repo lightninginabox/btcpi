@@ -26,6 +26,8 @@ else
   exit 1
 fi
 
+if [ -n "${VAR}" ]; then ;
+
 sfdisk --delete /dev/${hdd}
 sync
 sleep 4
@@ -75,6 +77,8 @@ while [ ${loopdone} -eq 0 ]
          exit 1
        fi
 done
+
+fi
 
 UUID="$(sudo blkid -s UUID -o value /dev/${partition1})"
 echo "UUID=$UUID /mnt/hdd ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
