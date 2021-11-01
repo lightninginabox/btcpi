@@ -10,7 +10,6 @@ export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-save-storage,opt-add-thunderhub"
 export BTCPAY_ENABLE_SSH=true
 
 # Configure External Storage
-mkdir -p /mnt/hdd
 isSD=$(fdisk -l | grep -c "/dev/mmcblk0:")
 isNVMe=$(fdisk -l | grep -c "/dev/nvme0n1:")
 isUSB=$(fdisk -l | grep -c "/dev/sda:")
@@ -23,11 +22,10 @@ elif [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
   hdd="nvme0n1"
   partition1="nvme0n1p1"
 else
-  exit 1
 fi
 
 if [ -n "${hdd}" ]; then ;
-
+mkdir -p /mnt/hdd
 sfdisk --delete /dev/${hdd}
 sync
 sleep 4
