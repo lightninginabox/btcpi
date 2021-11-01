@@ -26,7 +26,7 @@ else
   exit 1
 fi
 
-if [ -n "${VAR}" ]; then ;
+if [ -n "${hdd}" ]; then ;
 
 sfdisk --delete /dev/${hdd}
 sync
