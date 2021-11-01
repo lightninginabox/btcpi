@@ -78,8 +78,6 @@ while [ ${loopdone} -eq 0 ]
        fi
 done
 
-fi
-
 UUID="$(sudo blkid -s UUID -o value /dev/${partition1})"
 echo "UUID=$UUID /mnt/hdd ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
 mount /dev/${partition1} /mnt/hdd
@@ -88,6 +86,8 @@ isMounted=$(df | grep -c "/dev/${partition1}")
 if [ ${isMounted} -eq 1 ]; then
   mkdir -p /mnt/hdd/docker
   ln -s /mnt/hdd/docker /var/lib/docker
+fi
+
 fi
 
 # Disable Swapfile
