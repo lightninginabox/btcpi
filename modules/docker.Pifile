@@ -10,5 +10,6 @@ EOF
 
 # Install docker-compose
 RUN << EOF
+pip3 install setuptools
 pip3 install docker-compose
 EOF
