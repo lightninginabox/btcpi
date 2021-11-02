@@ -11,5 +11,6 @@ EOF
 # Install docker-compose
 RUN << EOF
 pip3 install setuptools
+SODIUM_INSTALL=system pip3 install pynacl
 pip3 install docker-compose
 EOF
