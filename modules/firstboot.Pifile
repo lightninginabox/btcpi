@@ -1,5 +1,5 @@
 # Install dependencies and configure firewall
-RUN apt-get install -y ufw fail2ban git build-essential python3-pip
+RUN apt-get install -y ufw fail2ban git build-essential python3-pip libffi-dev
 #RUN apt autoremove -y
 RUN apt-get install -y unattended-upgrades apt-listchanges
 RUN echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
