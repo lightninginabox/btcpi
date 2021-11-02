@@ -1,10 +1,11 @@
 # Install dependencies and configure firewall
 RUN apt-get install -y ufw fail2ban git build-essential python3-pip
-RUN apt update && apt upgrade -y 
-RUN apt autoremove -y
+#RUN apt update && apt upgrade -y 
+#RUN apt autoremove -y
 RUN apt-get install -y unattended-upgrades apt-listchanges
 RUN echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
 RUN dpkg-reconfigure -f noninteractive unattended-upgrades
+RUN apt autoremove -y
 
 # Copy BTCPayServer Installation Script
 
