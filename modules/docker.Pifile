@@ -10,7 +10,7 @@ EOF
 
 # Install docker-compose
 #apt-get update
-curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+#curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 RUN << EOF
 apt-get install -y git build-essential python3-pip
 pip3 install docker-compose
