@@ -18,11 +18,11 @@ source modules/password.Pifile
 # Set using BOOTSTRAP_TIMEZONE (default: America/Los_Angeles)
 source modules/timezone.Pifile
 
-# Install Docker
-source modules/docker.Pifile
-
 # Set Add Firstboot service
 source modules/firstboot.Pifile
+
+# Install Docker
+source modules/docker.Pifile
 
 # Set up wpa_supplicant.conf and enable wifi using
 # BOOTSTRAP_WPA_SSID, BOOTSTRAP_WPA_PASSPHRASE and BOOTSTRAP_WPA_COUNTRY (defaults: None)
