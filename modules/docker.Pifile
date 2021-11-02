@@ -7,10 +7,3 @@ bash -c 'curl -sSL get.docker.com | sh'
 groupadd --force docker
 usermod -aG docker $user
 EOF
-
-# Install docker-compose
-#apt-get update
-#curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-RUN << EOF
-apt-get install -y git build-essential python3-pip
-EOF
