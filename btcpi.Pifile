@@ -3,7 +3,7 @@
 FROM https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2021-05-28/2021-05-07-raspios-buster-arm64-lite.zip
 
 # Increase Image by 200M
-PUMP 200M
+PUMP 500M
 
 # Sets up env from .env and secrets.env for this Pifile
 # Usually included as the first line after a FROM/TO/INPLACE
