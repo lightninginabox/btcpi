@@ -21,10 +21,9 @@ if [ ${isSD} -eq 1 ] && [ ${isUSB} -eq 1 ]; then
 elif [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
   hdd="nvme0n1"
   partition1="nvme0n1p1"
-else
 fi
 
-if [ -n "${hdd}" ]; then ;
+if [ -n "${hdd}" ]; then
 mkdir -p /mnt/hdd
 sfdisk --delete /dev/${hdd}
 sync
