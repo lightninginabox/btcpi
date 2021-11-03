@@ -24,7 +24,7 @@ elif [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
 fi
 
 if [ -n "${hdd}" ]; then
-mkdir -p /mnt/hdd
+mkdir -p /mnt/docker
 sfdisk --delete /dev/${hdd}
 sync
 sleep 4
@@ -77,8 +77,8 @@ while [ ${loopdone} -eq 0 ]
 done
 
 UUID="$(sudo blkid -s UUID -o value /dev/${partition1})"
-echo "UUID=$UUID /mnt/hdd ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
-mount /dev/${partition1} /mnt/hdd
+echo "UUID=$UUID /mnt/docker ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
+mount /dev/${partition1} /mnt/docker
 sleep 5
 isMounted=$(df | grep -c "/dev/${partition1}")
 if [ ${isMounted} -eq 1 ]; then
