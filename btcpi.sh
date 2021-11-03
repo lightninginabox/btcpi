@@ -62,14 +62,14 @@ loopcount=0
     fi
  done
 
-mkfs.ext4 -F -L DOCKER /dev/${partition1} 
+mkfs.ext4 -F -L docker /dev/${partition1} 
 loopdone=0
 loopcount=0
 while [ ${loopdone} -eq 0 ]
  do
  sleep 2
  sync
- loopdone=$(lsblk -o NAME,LABEL | grep -c DOCKER)
+ loopdone=$(lsblk -o NAME,LABEL | grep -c docker)
  loopcount=$(($loopcount +1))
  if [ ${loopcount} -gt 10 ]; then
          exit 1
