@@ -40,11 +40,12 @@ if [ ${partitions} -gt 0 ]; then
   exit 1
 fi
 
-parted -s /dev/${hdd} mklabel gpt
-sleep 2
-sync
+#parted -s /dev/${hdd} mklabel gpt
+#sleep 2
+#sync
 
-parted /dev/${hdd} mkpart primary ext4 0% 100%
+#parted /dev/${hdd} mkpart primary ext4 0% 100%
+parted -s /dev/${hdd} mklabel gpt mkpart primary ext4 1MiB% 100%
 sleep 6
 sync
 # loop until the partition gets available
