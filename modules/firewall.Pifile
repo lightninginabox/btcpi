@@ -1,5 +1,5 @@
 # Install UFW Firewall
-RUN apt install -y ufw
+RUN apt install -y ufw fail2ban
 
 # Configure Firewall
 RUN ufw default deny incoming
