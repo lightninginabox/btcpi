@@ -103,22 +103,6 @@ dphys-swapfile uninstall
 update-rc.d dphys-swapfile remove
 systemctl disable dphys-swapfile
 
-# Configure Firewall
-ufw default deny incoming
-ufw default allow outgoing
-ufw allow from 10.0.0.0/8 to any port 22 proto tcp
-ufw allow from 172.16.0.0/12 to any port 22 proto tcp
-ufw allow from 192.168.0.0/16 to any port 22 proto tcp
-ufw allow from 169.254.0.0/16 to any port 22 proto tcp
-ufw allow from fc00::/7 to any port 22 proto tcp
-ufw allow from fe80::/10 to any port 22 proto tcp
-ufw allow from ff00::/8 to any port 22 proto tcp
-ufw allow 80/tcp
-ufw allow 443/tcp
-ufw allow 8333/tcp
-ufw allow 9735/tcp
-yes | ufw enable
-
 # Install BTCPayServer
 git clone https://github.com/btcpayserver/btcpayserver-docker
 cd btcpayserver-docker
