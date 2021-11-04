@@ -82,7 +82,7 @@ while [ ${loopdone} -eq 0 ]
        fi
 done
 
-UUID="$(sudo blkid -s UUID -o value ${PARTITION_NAME})"
+UUID="$(sudo blkid -s UUID -o value /dev/${PARTITION_NAME})"
 echo "UUID=$UUID ${MOUNT_DIR} ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
 mount /dev/${PARTITION_NAME} ${MOUNT_DIR}
 sleep 5
