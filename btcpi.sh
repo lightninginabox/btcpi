@@ -9,6 +9,12 @@ export BTCPAYGEN_REVERSEPROXY="nginx"
 export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-save-storage,opt-add-thunderhub"
 export BTCPAY_ENABLE_SSH=true
 
+DEVICE_NAME=""
+PARTITION_NAME=""
+MOUNT_DIR="/mnt/external"
+MOUNT_UNIT="mnt-external.mount"
+DOCKER_VOLUMES="/var/lib/docker/volumes"
+
 # Configure External Storage
 isSD=$(fdisk -l | grep -c "/dev/mmcblk0:")
 isNVMe=$(fdisk -l | grep -c "/dev/nvme0n1:")
@@ -16,36 +22,36 @@ isUSB=$(fdisk -l | grep -c "/dev/sda:")
 
 # If booting from SD with external storage
 if [ ${isSD} -eq 1 ] && [ ${isUSB} -eq 1 ]; then
-  hdd="sda"
-  partition1="sda1"
+  DEVICE_NAME="/dev/sda"
+  PARTITION_NAME="/dev/sda1"
 elif [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
-  hdd="nvme0n1"
-  partition1="nvme0n1p1"
+  DEVICE_NAME="/dev/nvme0n1"
+  PARTITION_NAME="/dev/nvme0n1p1"
 fi
 
-if [ -n "${hdd}" ]; then
-mkdir -p /mnt/docker
-sfdisk --delete /dev/${hdd}
+if [ -n "${DEVICE_NAME}" ]; then
+mkdir -p ${MOUNT_DIR}
+sfdisk --delete ${DEVICE_NAME}
 sync
 sleep 4
-sudo wipefs -a /dev/${hdd}
+sudo wipefs -a ${DEVICE_NAME}
 sync
 sleep 4
-partitions=$(lsblk | grep -c "─${hdd}")
+partitions=$(lsblk | grep -c "─${DEVICE_NAME}")
 if [ ${partitions} -gt 0 ]; then
-  dd if=/dev/zero of=/dev/${hdd} bs=512 count=1
+  dd if=/dev/zero of=${DEVICE_NAME} bs=512 count=1
 fi
-partitions=$(lsblk | grep -c "─${hdd}")
+partitions=$(lsblk | grep -c "─${DEVICE_NAME}")
 if [ ${partitions} -gt 0 ]; then
   exit 1
 fi
 
-#parted -s /dev/${hdd} mklabel gpt
+#parted -s ${DEVICE_NAME} mklabel gpt
 #sleep 2
 #sync
 
-#parted /dev/${hdd} mkpart primary ext4 0% 100%
-parted -s /dev/${hdd} mklabel gpt mkpart primary ext4 1MiB% 100%
+#parted ${DEVICE_NAME} mkpart primary ext4 0% 100%
+parted -s ${DEVICE_NAME} mklabel gpt mkpart primary ext4 1MiB% 100%
 sleep 6
 sync
 # loop until the partition gets available
@@ -55,36 +61,32 @@ loopcount=0
   do
   sleep 2
   sync
-  loopdone=$(lsblk -o NAME | grep -c ${partition1})
+  loopdone=$(lsblk -o NAME | grep -c ${PARTITION_NAME})
   loopcount=$(($loopcount +1))
   if [ ${loopcount} -gt 10 ]; then
     exit 1
     fi
  done
 
-mkfs.ext4 -F -L docker /dev/${partition1} 
+mkfs.ext4 -F -L external ${PARTITION_NAME} 
 loopdone=0
 loopcount=0
 while [ ${loopdone} -eq 0 ]
  do
  sleep 2
  sync
- loopdone=$(lsblk -o NAME,LABEL | grep -c docker)
+ loopdone=$(lsblk -o NAME,LABEL | grep -c external)
  loopcount=$(($loopcount +1))
  if [ ${loopcount} -gt 10 ]; then
          exit 1
        fi
 done
 
-UUID="$(sudo blkid -s UUID -o value /dev/${partition1})"
-echo "UUID=$UUID /mnt/docker ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
-mount /dev/${partition1} /mnt/docker
+UUID="$(sudo blkid -s UUID -o value ${PARTITION_NAME})"
+echo "UUID=$UUID ${MOUNT_DIR} ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
+mount ${PARTITION_NAME} ${MOUNT_DIR}
 sleep 5
-isMounted=$(df | grep -c "/dev/${partition1}")
-if [ ${isMounted} -eq 1 ]; then
-  mkdir -p /mnt/hdd/docker
-  ln -s /mnt/hdd/docker /var/lib/docker
-fi
+isMounted=$(df | grep -c "{$PARTITION_NAME}")
 
 fi
 
