@@ -22,36 +22,36 @@ isUSB=$(fdisk -l | grep -c "/dev/sda:")
 
 # If booting from SD with external storage
 if [ ${isSD} -eq 1 ] && [ ${isUSB} -eq 1 ]; then
-  DEVICE_NAME="/dev/sda"
-  PARTITION_NAME="/dev/sda1"
+  DEVICE_NAME="sda"
+  PARTITION_NAME="sda1"
 elif [ ${isSD} -eq 1 ] && [ ${isNVMe} -eq 1 ]; then
-  DEVICE_NAME="/dev/nvme0n1"
-  PARTITION_NAME="/dev/nvme0n1p1"
+  DEVICE_NAME="nvme0n1"
+  PARTITION_NAME="nvme0n1p1"
 fi
 
 if [ -n "${DEVICE_NAME}" ]; then
 mkdir -p ${MOUNT_DIR}
-sfdisk --delete ${DEVICE_NAME}
+sfdisk --delete /dev/${DEVICE_NAME}
 sync
 sleep 4
-sudo wipefs -a ${DEVICE_NAME}
+sudo wipefs -a /dev/${DEVICE_NAME}
 sync
 sleep 4
 partitions=$(lsblk | grep -c "─${DEVICE_NAME}")
 if [ ${partitions} -gt 0 ]; then
-  dd if=/dev/zero of=${DEVICE_NAME} bs=512 count=1
+  dd if=/dev/zero of=/dev/${DEVICE_NAME} bs=512 count=1
 fi
 partitions=$(lsblk | grep -c "─${DEVICE_NAME}")
 if [ ${partitions} -gt 0 ]; then
   exit 1
 fi
 
-#parted -s ${DEVICE_NAME} mklabel gpt
+#parted -s /dev/${DEVICE_NAME} mklabel gpt
 #sleep 2
 sync
 
-#parted ${DEVICE_NAME} mkpart primary ext4 0% 100%
-parted -s ${DEVICE_NAME} mklabel gpt mkpart primary ext4 1MiB% 100%
+#parted /dev/${DEVICE_NAME} mkpart primary ext4 0% 100%
+parted -s /dev/${DEVICE_NAME} mklabel gpt mkpart primary ext4 1MiB% 100%
 sleep 6
 sync
 # loop until the partition gets available
@@ -68,7 +68,7 @@ loopcount=0
     fi
  done
 
-mkfs.ext4 -F -L external ${PARTITION_NAME} 
+mkfs.ext4 -F -L external /dev/${PARTITION_NAME} 
 loopdone=0
 loopcount=0
 while [ ${loopdone} -eq 0 ]
@@ -84,9 +84,8 @@ done
 
 UUID="$(sudo blkid -s UUID -o value ${PARTITION_NAME})"
 echo "UUID=$UUID ${MOUNT_DIR} ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
-mount ${PARTITION_NAME} ${MOUNT_DIR}
+mount /dev/${PARTITION_NAME} ${MOUNT_DIR}
 sleep 5
-isMounted=$(df | grep -c "{$PARTITION_NAME}")
 
 fi
 
