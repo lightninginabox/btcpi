@@ -94,8 +94,13 @@ UUID="$(sudo blkid -s UUID -o value /dev/${PARTITION_NAME})"
 echo "UUID=$UUID ${MOUNT_DIR} ext4 defaults,noatime,nofail 0 0" | tee -a /etc/fstab
 mount /dev/${PARTITION_NAME} ${MOUNT_DIR}
 sleep 5
-
+rm -rf "$DOCKER_VOLUMES"
+mkdir -p "$DOCKER_VOLUMES"
+mount --bind "$MOUNT_DIR" "$DOCKER_VOLUMES"
+echo "$MOUNT_DIR $DOCKER_VOLUMES none bind,nobootwait 0 2" >> /etc/fstab
+systemctl restart docker
 fi
+
 
 # Configure Firewall
 ufw default deny incoming
