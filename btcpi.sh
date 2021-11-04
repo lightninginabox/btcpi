@@ -40,20 +40,27 @@ sleep 4
 partitions=$(lsblk | grep -c "─${DEVICE_NAME}")
 if [ ${partitions} -gt 0 ]; then
   dd if=/dev/zero of=/dev/${DEVICE_NAME} bs=512 count=1
+  sync
 fi
 partitions=$(lsblk | grep -c "─${DEVICE_NAME}")
 if [ ${partitions} -gt 0 ]; then
   exit 1
 fi
 
-#parted -s /dev/${DEVICE_NAME} mklabel gpt
-#sleep 2
-sync
+#parted -s /dev/${DEVICE_NAME} mklabel gpt mkpart primary ext4 1MiB% 100%
+#sleep 6
+#sync
 
-#parted /dev/${DEVICE_NAME} mkpart primary ext4 0% 100%
-parted -s /dev/${DEVICE_NAME} mklabel gpt mkpart primary ext4 1MiB% 100%
-sleep 6
-sync
+(
+echo o # Create a new empty DOS partition table
+echo n # Add a new partition
+echo p # Primary partition
+echo 1 # Partition number
+echo   # First sector (Accept default: 1)
+echo   # Last sector (Accept default: varies)
+echo w # Write changes
+) | fdisk /dev/${DEVICE_NAME}
+
 # loop until the partition gets available
 loopdone=0
 loopcount=0
