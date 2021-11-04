@@ -60,6 +60,7 @@ echo   # First sector (Accept default: 1)
 echo   # Last sector (Accept default: varies)
 echo w # Write changes
 ) | fdisk /dev/${DEVICE_NAME}
+sync
 
 # loop until the partition gets available
 loopdone=0
