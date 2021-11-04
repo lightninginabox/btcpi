@@ -48,7 +48,7 @@ fi
 
 #parted -s ${DEVICE_NAME} mklabel gpt
 #sleep 2
-#sync
+sync
 
 #parted ${DEVICE_NAME} mkpart primary ext4 0% 100%
 parted -s ${DEVICE_NAME} mklabel gpt mkpart primary ext4 1MiB% 100%
