@@ -1,0 +1,18 @@
+# Install UFW Firewall
+RUN apt install -y ufw
+
+# Configure Firewall
+RUN ufw default deny incoming
+RUN ufw default allow outgoing
+RUN ufw allow from 10.0.0.0/8 to any port 22 proto tcp
+RUN ufw allow from 172.16.0.0/12 to any port 22 proto tcp
+RUN ufw allow from 192.168.0.0/16 to any port 22 proto tcp
+RUN ufw allow from 169.254.0.0/16 to any port 22 proto tcp
+RUN ufw allow from fc00::/7 to any port 22 proto tcp
+RUN ufw allow from fe80::/10 to any port 22 proto tcp
+RUN ufw allow from ff00::/8 to any port 22 proto tcp
+RUN ufw allow 80/tcp
+RUN ufw allow 443/tcp
+RUN ufw allow 8333/tcp
+RUN ufw allow 9735/tcp
+RUN yes | ufw enable
