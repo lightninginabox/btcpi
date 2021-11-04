@@ -27,9 +27,6 @@ source modules/firstboot.Pifile
 # Install Docker
 source modules/docker.Pifile
 
-# Install UFW Firewall
-source modules/firewall.Pifile
-
 # Set up wpa_supplicant.conf and enable wifi using
 # BOOTSTRAP_WPA_SSID, BOOTSTRAP_WPA_PASSPHRASE and BOOTSTRAP_WPA_COUNTRY (defaults: None)
 # Note: all 3 vars need to be set, otherwise wpa_supplicant.conf will not be generated
