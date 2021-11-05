@@ -125,6 +125,6 @@ git clone https://github.com/btcpayserver/btcpayserver-docker
 cd btcpayserver-docker
 . btcpay-setup.sh -i
 
-# Update RaspiOS & Enable Unattended Upgrades
+# Update RaspiOS
 apt update && apt upgrade -y 
 apt autoremove -y
