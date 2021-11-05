@@ -9,12 +9,12 @@ export BTCPAYGEN_REVERSEPROXY="nginx"
 export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-save-storage,opt-add-thunderhub"
 export BTCPAY_ENABLE_SSH=true
 
+# Configure External Storage
 DEVICE_NAME=""
 PARTITION_NAME=""
 MOUNT_DIR="/mnt/external"
 DOCKER_VOLUMES="/var/lib/docker/volumes"
 
-# Configure External Storage
 isSD=$(fdisk -l | grep -c "/dev/mmcblk0:")
 isNVMe=$(fdisk -l | grep -c "/dev/nvme0n1:")
 isUSB=$(fdisk -l | grep -c "/dev/sda:")
