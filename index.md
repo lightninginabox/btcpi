@@ -21,7 +21,7 @@ DIY Bitcoin/Lightning Node for under $200!
 1. Download compressed image [BTCPi](https://gateway.ipfs.io/ipfs/QmXbRmbjpnhLXqeobjH68SfMgY55N13rtgTEnzvzVviwS7).
 2. Unzip image. 
 3. Flash image to SD card using [Belena Etcher](https://www.balena.io/etcher/) or [Rufus](https://rufus.ie/en/). 
-    - Expert tip - Skip the SD card and lash the image directly to your USB 3.0 SSD if your [RPi4 can boot from USB](https://www.tomshardware.com/how-to/boot-raspberry-pi-4-usb). 
+    - Expert tip - Skip the SD card and flash the image directly to your USB 3.0 SSD if your [RPi4 can boot from USB](https://www.tomshardware.com/how-to/boot-raspberry-pi-4-usb). 
 5. Connect External USB SSD to Raspberry Pi (make sure you use one of the blue USB 3.0 ports). 
 6. Power on Raspberry Pi. 
 
