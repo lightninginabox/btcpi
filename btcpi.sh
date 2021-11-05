@@ -12,7 +12,6 @@ export BTCPAY_ENABLE_SSH=true
 DEVICE_NAME=""
 PARTITION_NAME=""
 MOUNT_DIR="/mnt/external"
-MOUNT_UNIT="mnt-external.mount"
 DOCKER_VOLUMES="/var/lib/docker/volumes"
 
 # Configure External Storage
