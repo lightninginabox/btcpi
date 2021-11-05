@@ -10,9 +10,9 @@ RUN apt update && apt upgrade -y
 RUN apt autoremove -y
 
 # Copy BTCPayServer Installation Script
-
 RUN wget -O /boot/firstboot.sh https://raw.githubusercontent.com/lightninginabox/btcpi/master/btcpi.sh
 
+# Add firstboot service
 RUN << EOF &> /dev/null
 echo [Unit] > /etc/systemd/system/firstboot.service
 echo Description=FirstBoot >> /etc/systemd/system/firstboot.service
