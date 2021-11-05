@@ -120,9 +120,9 @@ update-rc.d dphys-swapfile remove
 systemctl disable dphys-swapfile
 
 # Install BTCPayServer
+cd /root
 git clone https://github.com/btcpayserver/btcpayserver-docker
 cd btcpayserver-docker
-sleep 20
 . btcpay-setup.sh -i
 
 # Update RaspiOS & Enable Unattended Upgrades
