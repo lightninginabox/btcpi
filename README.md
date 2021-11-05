@@ -13,7 +13,7 @@
 
 ## Install BTCPayServer in 5 easy steps. 
 **Warning! Your external SSD will be reformatted, make sure your drive does not contain anything you plan to keep.** 
-1. Download compressed image [BTCPi](https://gateway.ipfs.io/ipfs/QmXsnFvDfnSoRStbmQd6vsGmkfCtFFEXLTRBEkXzVHUqzn).
+1. Download compressed image [BTCPi](https://gateway.ipfs.io/ipfs/QmXbRmbjpnhLXqeobjH68SfMgY55N13rtgTEnzvzVviwS7.zip).
 2. Unzip image. 
 3. Flash image to SD card using [Belena Etcher](https://www.balena.io/etcher/) or [Rufus](https://rufus.ie/en/). 
 4. Connect External USB SSD to Raspberry Pi (make sure you use one of the blue USB 3.0 ports). 
