@@ -47,10 +47,6 @@ if [ ${partitions} -gt 0 ]; then
   exit 1
 fi
 
-#parted -s /dev/${DEVICE_NAME} mklabel gpt mkpart primary ext4 1MiB% 100%
-#sleep 6
-#sync
-
 (
 echo o # Create a new empty DOS partition table
 echo n # Add a new partition
