@@ -1,16 +1,5 @@
-# Install dependencies and configure firewall
-RUN df -h
-RUN apt-get install -y ufw fail2ban git build-essential
-#RUN apt autoremove -y
-RUN apt-get install -y unattended-upgrades apt-listchanges
-RUN echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
-RUN dpkg-reconfigure -f noninteractive unattended-upgrades
-RUN apt autoremove -y
-RUN apt update && apt upgrade -y 
-RUN apt autoremove -y
-
 # Copy BTCPayServer Installation Script
-RUN wget -O /boot/firstboot.sh https://raw.githubusercontent.com/lightninginabox/btcpi/master/btcpi.sh
+RUN wget -O /boot/firstboot.sh https://raw.githubusercontent.com/lightninginabox/btcpayserver-doc/RPi4Install/docs/Deployment/btcpayserver-lnd-rpi4-install.txt
 
 # Add firstboot service
 RUN << EOF &> /dev/null
