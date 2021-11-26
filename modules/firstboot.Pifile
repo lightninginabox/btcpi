@@ -1,5 +1,5 @@
 # Copy BTCPayServer Installation Script
-RUN wget -O /boot/firstboot.sh https://raw.githubusercontent.com/lightninginabox/btcpayserver-doc/RPi4Install/docs/Deployment/btcpayserver-lnd-rpi4-install.txt
+RUN wget -O /boot/firstboot.sh https://raw.githubusercontent.com/lightninginabox/btcpayserver-doc/RPi4Install/docs/Deployment/btcpayserver-clightning-rpi4-install.txt
 
 # Add firstboot service
 RUN << EOF &> /dev/null
