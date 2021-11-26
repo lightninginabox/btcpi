@@ -9,7 +9,7 @@ export BTCPAYGEN_REVERSEPROXY="nginx"
 export BTCPAYGEN_ADDITIONAL_FRAGMENTS=""
 export BTCPAY_ENABLE_SSH=true
 
-# Install Docker & Docker
+# Install Docker
 apt install apt-transport-https ca-certificates curl gnupg lsb-release -y
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
@@ -106,6 +106,7 @@ fi
 
 
 # Configure Firewall
+apt install -y ufw fail2ban
 ufw default deny incoming
 ufw default allow outgoing
 ufw allow from 10.0.0.0/8 to any port 22 proto tcp
@@ -133,6 +134,7 @@ git clone https://github.com/btcpayserver/btcpayserver-docker
 cd btcpayserver-docker
 . btcpay-setup.sh -i
 
-# Update RaspiOS
-apt update && apt upgrade -y 
-apt autoremove -y
+# Display Onion Address
+echo "On another computer open your browser to btcpay.local"
+echo "or open the Tor Browser and copy and past the following .onion address."
+tail /var/lib/docker/volumes/generated_tor_servicesdir/_data/BTCPayServer/hostname
