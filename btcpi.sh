@@ -6,8 +6,13 @@ export NBITCOIN_NETWORK="mainnet"
 export BTCPAYGEN_CRYPTO1="btc"
 export BTCPAYGEN_LIGHTNING="lnd"
 export BTCPAYGEN_REVERSEPROXY="nginx"
-export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-save-storage-xs;opt-add-thunderhub"
+export BTCPAYGEN_ADDITIONAL_FRAGMENTS=""
 export BTCPAY_ENABLE_SSH=true
+
+# Install Docker & Docker Compose
+curl -sSL https://get.docker.com | sh
+apt-get install -y git build-essential python3-pip
+pip3 install docker-compose
 
 # Configure External Storage
 DEVICE_NAME=""
