@@ -19,7 +19,7 @@ DIY Bitcoin/Lightning Node for under $200!
 ## Install BTCPayServer in 5 easy steps. 
 **Warning! Your external SSD will be reformatted, make sure your drive does not contain anything you plan to keep.** 
 
-1. Download compressed image [btcpi-clightning.zip](https://gateway.ipfs.io/ipfs/QmTEm7BQCmf2y1gro6CS5YhpqD1hHQkyBAJSUFtRRekbuC).
+1. Download compressed image [btcpi-clightning.zip](https://gateway.ipfs.io/ipfs/QmTEm7BQCmf2y1gro6CS5YhpqD1hHQkyBAJSUFtRRekbuC/btcpi-clightning.zip).
 2. Unzip image. 
 3. Flash image to SD card using [Belena Etcher](https://www.balena.io/etcher/) or [Rufus](https://rufus.ie/en/). 
     - Expert tip - Skip the SD card and flash the image directly to your USB 3.0 SSD if your [RPi4 can boot from USB](https://www.tomshardware.com/how-to/boot-raspberry-pi-4-usb). 
