@@ -1,5 +1,5 @@
 ## BTCPi (feat. BTCPayServer)
-Installing [BTCPayServer](https://btcpayserver.org) is easy as Pi.
+Installing [BTCPayServer](https://docs.btcpayserver.org/Deployment/RaspberryPi4/#quickstart) is easy as Pi.
 
 ## Recommended Hardware
 - [SanDisk Extreme 32 GB Micro SD Card](https://www.amazon.com/gp/product/B06XWMQ81P/ref=ewc_pr_img_1?smid=A3QF16EH69HELL&psc=1) ~ $11.32
